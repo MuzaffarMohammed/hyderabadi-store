@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
 <link rel="stylesheet"
 	href="//fonts.googleapis.com/css?family=Raleway:400,300,600" />
@@ -35,18 +36,15 @@ body {
 	<div class="container">
 		<h1 style="color: #82b0ca; font-weight: 600;">Welcome to <p th:text="${session.title}" th:unless="${session == null}"></p> </h1>
 		 <div class="row">
-			<form th:object="${loginUser}" th:action="@{/authenticate}"
-				method="post">
+			<form th:object="${loginUser}" th:action="@{/authenticate}" method="post">
 				<div>
-					<label style="color: white;">User Name: <input type="text" th:field="*{userName}" 
-						style="margin-left: 4px; width: 500px; height: 50px;"/></label><br />
-					<p th:if="${#fields.hasErrors('userName')}" th:errors="*{userName}"></p>
-				</div>
+					<label style="color: white;">User Name: <input type="text" th:field="*{userName}" style="margin-left: 4px; width: 500px; height: 50px;"/></label><br />
+<!-- 					<p th:if="${#fields.hasErrors('userName')}" th:errors="*{userName}"></p>
+ -->				</div>
 				<div>
-					<label style="color: white;">Password: <input type="password" th:field="*{password}" 
-						style="margin-left: 15px; width: 500px; height: 50px;"/></label><br />
-					<p th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></p>
-				</div>
+					<label style="color: white;">Password: <input type="password" th:field="*{password}" style="margin-left: 15px; width: 500px; height: 50px;"/></label><br />
+<!-- 					<p th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></p>
+ -->				</div>
 				<div style="padding-left: 90px;">
 					<button type="submit"
 						style="color: blue; width: 200px; margin-left: 150px;">Submit</button>
