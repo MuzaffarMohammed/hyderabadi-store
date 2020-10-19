@@ -1,4 +1,4 @@
-package com.mvc.spring;
+package com.hs;
 
 
 import org.springframework.context.annotation.Configuration;

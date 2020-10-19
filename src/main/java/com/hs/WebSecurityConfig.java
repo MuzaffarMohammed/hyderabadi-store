@@ -1,3 +1,4 @@
+package com.hs;
 //package com.mvc.spring;
 //
 //import org.springframework.context.annotation.Bean;

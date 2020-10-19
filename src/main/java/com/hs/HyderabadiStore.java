@@ -1,15 +1,17 @@
-package com.mvc.spring;
+package com.hs;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan("com.mvc.spring.controllers")
-public class DemoApplication {
+@ComponentScan("com.hs, com.hs.controllers, com.hs.services")
+public class HyderabadiStore {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
+		SpringApplication.run(HyderabadiStore.class, args);
 	}
 
+	
+	 
 }

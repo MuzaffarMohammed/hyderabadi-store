@@ -1,4 +1,4 @@
-package com.mvc.spring.model;
+package com.hs.model;
 
 public class LoginUser {
 
